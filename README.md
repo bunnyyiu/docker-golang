@@ -9,7 +9,7 @@ usage
 make a dockerfile for your application based on this one:
 
 ```
-FROM mischief/docker-golang
+FROM bunnyyiu/docker-golang
 ENV HOME /root
 RUN apt-get install -y libsqlite3-dev 
 RUN go get github.com/robfig/revel/revel
@@ -22,7 +22,7 @@ CMD revel run github.com/PacketFire/goqdb prod
 run it:
 
 ```
-docker build -t mischief/goqdb .
-docker run -d -p 9000:9000 mischief/goqdb
+docker build -t bunnyyiu/goqdb .
+docker run -d -p 9000:9000 bunnyyiu/goqdb
 w3m http://127.0.0.1:9000/
 ```
